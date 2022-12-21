@@ -15,11 +15,11 @@ class QuickfinderAdminDisplay {
 
 
 	public function __construct() {
-		add_action( 'admin_menu', array( $this, 'pluginskeleton_menu' ) );
+		add_action( 'admin_menu', array( $this, 'quickfinder_menu' ) );
 
 	}
 
-	public function pluginskeleton_menu() {
+	public function quickfinder_menu() {
 		add_menu_page( 'Quickfinder', 'Quickfinder', 'manage_options', 'quickfinder.php', array(
 			$this,
 			'quickfinder_page'
