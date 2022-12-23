@@ -127,6 +127,11 @@ class Quickfinder {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ). 'includes/class-quickfinder-post-type.php';
 
+		/**
+		 * The class responsible for display quickfinder post type
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ). 'includes/class-quickfinder-shortcode.php';
+
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
@@ -135,6 +140,7 @@ class Quickfinder {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-quickfinder-public.php';
 
 		$this->loader = new Quickfinder_Loader();
+
 
 	}
 
@@ -167,12 +173,13 @@ class Quickfinder {
 		$plugin_admin = new Quickfinder_Admin( $this->get_plugin_name(), $this->get_version() );
 		$plugin_admin_page = new QuickfinderAdminDisplay();
 		$plugin_admin_post_type = new QuickfinderPostType();
+		$shortcode = new QuickfinderShortcode();
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
 		$this->loader->add_action( 'add_menu_page', $plugin_admin_page, 'application_users_page' );
-		$this->loader->add_action( 'init', $plugin_admin_post_type, 'create_post_type') ;
+		$this->loader->add_action( 'init', $plugin_admin_post_type, 'create_post_type');
 
 	}
 
