@@ -47,7 +47,8 @@ class QuickfinderPostType {
 				'supports'            => [
 					'title',
 					'editor',
-					'revisions'
+					'revisions',
+                    'custom-fields'
 				]
 			)
 		);

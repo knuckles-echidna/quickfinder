@@ -2,3 +2,69 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+.quickfinder {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+.quickfinder h2 {
+  color: #19486a;
+  display: flex;
+  font-weight: bold;
+  margin-top: 0;
+}
+.quickfinder-header {
+  text-align: left;
+}
+.quickfinder-header h2 {
+  font-size: 1.5rem;
+}
+.quickfinder-main {
+  display: flex;
+  flex-direction: column;
+}
+.quickfinder-main .quickfinder-section {
+  display: none;
+  flex-direction: column;
+}
+.quickfinder-main .quickfinder-section.active {
+  display: flex;
+}
+.quickfinder-main .quickfinder-section .section-title h3 {
+  color: #fd6925;
+}
+.quickfinder-main .quickfinder-section .quickfinder-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.quickfinder-main .quickfinder-section .quickfinder-blocks .quickfinder-block {
+  width: 30%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+  text-decoration: none;
+}
+.quickfinder-main .quickfinder-section .quickfinder-blocks .quickfinder-block h4 {
+  margin-top: 0;
+}
+.quickfinder-main .quickfinder-section .quickfinder-blocks .quickfinder-block .link-stack {
+  margin-left: 0;
+}
+.quickfinder-main .quickfinder-section .quickfinder-blocks .quickfinder-block .link-stack li {
+  padding: 0;
+  margin: 0;
+}
+.quickfinder .quickfinder-navigation {
+  margin-top: 30px;
+}
+.quickfinder .quickfinder-navigation ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+/*# sourceMappingURL=quickfinder-public.css.map */

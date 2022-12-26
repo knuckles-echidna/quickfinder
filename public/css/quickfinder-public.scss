@@ -1,0 +1,91 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+$primaryColor: #19486a;
+$secondaryColor: #fd6925;
+.quickfinder {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    color: $primaryColor;
+    display: flex;
+    font-weight: bold;
+    margin-top: 0;
+  }
+
+  &-header {
+    text-align: left;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  &-main {
+    display: flex;
+    flex-direction: column;
+
+    .quickfinder-section {
+      display: none;
+      flex-direction: column;
+
+      &.active {
+        display: flex;
+      }
+
+      .section-title {
+
+        h3 {
+          color: $secondaryColor;
+        }
+      }
+
+      .quickfinder-blocks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .quickfinder-block {
+          width: 30%;
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          border: 1px solid rgba(0, 0, 0, 0.05);
+          background-color: rgba(0, 0, 0, 0.05);
+          margin-top: 30px;
+          text-decoration: none;
+
+          h4 {
+            margin-top: 0;
+          }
+
+          .link-stack {
+            margin-left: 0;
+
+            li {
+              padding: 0;
+              margin: 0;
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+
+  .quickfinder-navigation {
+    margin-top: 30px;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+
+    }
+  }
+}
+
