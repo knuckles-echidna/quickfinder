@@ -70,7 +70,7 @@ class QuickfinderShortcode {
 								if($links):
 									$output .= "<ol class='link-stack'>";
 									foreach($links as $link):
-										$output .= "<li><a href='$link[link]'>$link[link_text]</a></li>";
+										$output .= "<li><a target='_blank' href='$link[link]'>$link[link_text]</a></li>";
 									endforeach;
 									$output .= "</ul>";
 								endif;
@@ -88,11 +88,12 @@ class QuickfinderShortcode {
 					$output .= "</section >";
 
 				endforeach;
+				/*<li>
+					<a href="#" id="quickfinder-back">'.__('Back','quickfinder').'</a>
+				</li>*/
 				$output .= '<nav class="quickfinder-navigation">
 								<ul>
-									<li>
-										<a href="#" id="quickfinder-back">'.__('Back','quickfinder').'</a>
-									</li>
+									
 									<li>
 										<a href="#" id="quickfinder-home">'.__('Home','quickfinder').'</a>
 									</li>

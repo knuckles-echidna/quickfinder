@@ -1,17 +1,20 @@
 (function( $ ) {
 	'use strict';
 	$(document).ready(function(){
-
-
-	});
-	function tabEnabler(tab){
 		$('a.quickfinder-block').on('click', function(e){
 			e.preventDefault();
 			let activeSection = $(this).attr('href');
-			$.each($('.quickfinder-section'), function(){
-				$(this).removeClass('active');
-			});
-			$(activeSection).addClass('active');
+			tabEnabler(activeSection)
 		});
+		$('#quickfinder-home').on('click', function(){
+			tabEnabler($('#quickfinder-section-1'));
+		});
+	});
+	function tabEnabler(tab){
+		$.each($('.quickfinder-section'), function(){
+			$(this).removeClass('active');
+		});
+		$(tab).addClass('active');
+
 	}
 })( jQuery );
