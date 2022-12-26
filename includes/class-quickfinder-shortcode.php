@@ -43,7 +43,7 @@ class QuickfinderShortcode {
 					$output .= "<section id='quickfinder-section-$section_id' class='quickfinder-section quickfinder-section-$section_id $active'>";
 
 					if ( $section_title ):
-						$output .= "<header class='section-title'><h3>$section_title</h3></header>";
+						$output .= "<header class='section-title'>$section_title</header>";
 					endif;
 
 					if ( $blocks && count( $blocks ) > 0 ):
@@ -68,7 +68,7 @@ class QuickfinderShortcode {
 								endif;
 
 								if($links):
-									$output .= "<ol class='link-stack'>";
+									$output .= "<ul class='link-stack'>";
 									foreach($links as $link):
 										$output .= "<li><a target='_blank' href='$link[link]'>$link[link_text]</a></li>";
 									endforeach;
@@ -93,7 +93,6 @@ class QuickfinderShortcode {
 				</li>*/
 				$output .= '<nav class="quickfinder-navigation">
 								<ul>
-									
 									<li>
 										<a href="#" id="quickfinder-home">'.__('Home','quickfinder').'</a>
 									</li>
